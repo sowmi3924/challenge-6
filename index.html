@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h6>Challenge 6</h6>
+
+<script>
+function calcTip(billValue)
+ {
+    if (billValue >= 50 && billValue <= 300) 
+    {
+        return 0.15 * billValue;
+    }
+     else 
+     {
+        return 0.20 * billValue;
+    }
+}
+const bills = [125, 555, 44];
+const tips = bills.map(bill => calcTip(bill));
+const total = bills.map((bill, index) => bill + tips[index]);
+const testValue = 100;const testTip = calcTip(testValue);
+console.log(`Tip for $${testValue}: $${testTip}`);
+console.log("Bills:", bills);
+console.log("Tips:", tips);
+console.log("Total:", total);
+</script>
+</body>
+</html>
